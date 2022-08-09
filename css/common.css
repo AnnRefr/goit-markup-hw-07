@@ -1,0 +1,24 @@
+/* колір основного тексту #212121;  */
+/* вторичний колір тексту rgba(117, 117, 117, 1); */
+/* білий #E5E5E5 */
+/* акцент rgba(33, 150, 243, 1); */
+
+:root{
+    --primary-text-color: rgba(117, 117, 117, 1);
+    --title-text-color: rgba(33, 33, 33, 1);
+    --accent-color: rgba(33, 150, 243, 1);
+    --secondary-text-color: rgba(255, 255, 255, 1);
+    --more-transparent-white-color: rgba(255, 255, 255, 0.6);
+    --primary-white-color: #E5E5E5 ;
+    --secondary-bg-color: rgba(47, 48, 58, 1);
+
+}
+
+body {
+    background-color: var(--primary-bg-color) ;
+    color: var(--primary-text-color);
+}
+
+.logo {
+    color: var(--accent-color);
+}
