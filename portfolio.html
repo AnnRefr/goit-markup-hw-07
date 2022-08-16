@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,38 +23,42 @@
   </head>
   <body class="page-body">
     <!-- шапка сайту -->
-    <header class="header-general">
-      <div class="container header-container">
+    <header class="header">
+      <div class="container header__container">
         <!-- логотип сайту -->
         <a
+          class="logo header__logo link"
           href="./"
           lang="en"
           rel="noopener noreferrer"
           target="_blank"
-          class="logo"
           ><span class="accent">Web</span>Studio</a
         >
 
         <!-- меню навігації -->
-        <nav class="header-nav">
-          <ul class="site-nav list">
-            <li class="header-item">
-              <a href="./index.html" class="link">Студия</a>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link link">Студия</a>
             </li>
-            <li class="header-item">
-              <a href="./portfolio.html" class="link header-link-current"
+            <li class="nav__item">
+              <a
+                href="./portfolio.html"
+                class="nav__link nav__link--current link"
                 >Портфолио</a
               >
             </li>
-            <li class="header-item"><a href="./" class="link">Контакты</a></li>
+            <li class="nav__item">
+              <a href="./" class="nav__link link">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <ul class="auth-nav list">
-          <li class="auth-nav-link">
-            <div class="header-contact">
-              <a class="header-link" href="mailto:info@devstudio.com"
-                ><svg class="header-icons" width="16" height="12">
+          <li class="auth-nav__item auth-nav__item--mail">
+            <div class="auth-nav__contact">
+              <a class="auth-nav__link link" href="mailto:info@devstudio.com"
+                ><svg class="auth-nav__icons" width="16" height="12">
                   <use href="./images/icons.svg#envelope"></use>
                 </svg>
                 info@devstudio.com</a
@@ -61,10 +66,10 @@
             </div>
           </li>
 
-          <li class="auth-nav-phone">
-            <div class="header-contact">
-              <a class="header-phone" href="tel:+380961111111"
-                ><svg class="header-icons" width="10" height="16">
+          <li class="auth-nav__item auth-nav__item--phone">
+            <div class="auth-nav__contact">
+              <a class="auth-nav__phone link" href="tel:+380961111111"
+                ><svg class="auth-nav__icons" width="10" height="16">
                   <use href="./images/icons.svg#vector"></use>
                 </svg>
                 +38 096 111 11 11</a
@@ -105,7 +110,7 @@
           <ul class="all-projects card-set list">
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -136,7 +141,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -166,7 +171,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -196,7 +201,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -226,7 +231,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -256,7 +261,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -286,7 +291,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -316,7 +321,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -346,7 +351,7 @@
             </li>
             <li class="project card-item">
               <a
-                class="project-link"
+                class="project-link link"
                 href="./"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -390,7 +395,7 @@
             lang="en"
             rel="noopener noreferrer"
             target="_blank"
-            class="footer-logo"
+            class="footer-logo logo link"
             ><span class="accent">Web</span>Studio</a
           >
           <address class="adress-list">
@@ -420,7 +425,7 @@
 
         <!-- права сторона футеру -->
         <div class="footer-right">
-          <h3 class="footer-join">присоединяйтесь</h3>
+          <h2 class="footer-join">присоединяйтесь</h2>
           <ul class="socials list">
             <li class="socials-item">
               <a
@@ -478,18 +483,22 @@
         </div>
 
         <!-- підписка у футері -->
-          <div class="footer-subscription container">
-              <h2 class="footer-subscription-title">Підпишіться на розсилку</h2>
-                  <form class="footer-form" name="footer-form" autocomplete="off">
-                    <input class="footer-subscription-input" name="subscription" placeholder="E-mail" />
-                    <button class="footer-subscription-button">
-                      Підписатися
-                      <svg class="footer-btn-icon" width="24" height="24">
-                        <use href="./images/icons.svg#send"></use>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
+        <div class="footer-subscription container">
+          <h2 class="footer-subscription-title">Підпишіться на розсилку</h2>
+          <form class="footer-sub-form" name="footer-form" autocomplete="off">
+            <input
+              class="footer-subscription-input"
+              name="subscription"
+              placeholder="E-mail"
+            />
+            <button class="footer-subscription-button">
+              Підписатися
+              <svg class="footer-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   </body>
